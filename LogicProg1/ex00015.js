@@ -15,7 +15,7 @@ var totalIdades = 0;
 
 while (numero  <= totalFamiliares) {
     
-    var idade = parseInt(prompt("Informe idade do familiar"))
+    var idade = parseInt(prompt("Informe idade do familiar"));
     totalIdades = totalIdades + idade;
     numero++;
 }
