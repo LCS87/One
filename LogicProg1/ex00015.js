@@ -22,4 +22,4 @@ while (numero  <= totalFamiliares) {
 
 var mediaDasIdades = totalIdades/totalFamiliares;
 mostra("A medida das idades dos Fami9liares é :" + mediaDasIdades);
-mostra("FIM")
+mostra("FIM");
