@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Encriptador de Texto</title>
+	</head>
+	<body>
+		<div>
+		<input placeholder="digite uma palavra" id="entrada">
+		<button onclick="encrypt()">Encriptar</button>
+        <input type="reset" value="limpar">
+	    </div>
+
+         <div>
+        <input placeholder="digite uma palavra" id="entrada1">
+		<button onclick="decrypt()">Descriptar</button>
+        <input type="reset" value="limpar" onclick="">
+	    </div>
+		<div id="result"></div>
+		<script>
+
+			function encrypt(){
+				var rawtext = document.getElementById("entrada").value;
+				var text1 = "";
+				for(i = 0; i < rawtext.length; i++){
+					text1 += enc(rawtext[i]);
+				}
+				document.getElementById("result").innerHTML = text1;
+			}
+
+			function decrypt(){
+				var rawtext = document.getElementById("entrada1").value;
+				var text = "";
+				for(i = 0; i < rawtext.length; i++){
+					text += desc(rawtext[i]);
+				}
+				document.getElementById("result").innerHTML = text;
+			}
+
+			function enc(x){
+				switch(x){
+					case "a" :
+						return "ai";
+						break;
+					case "e" :
+						return "enter";
+						break;
+					case "i" :
+						return "imes";
+						break;
+					case "o" :
+						return "ober";
+						break;
+                    case "u" :
+						return "ufat";
+						break;
+				}
+			}
+			function desc(x){
+				switch(x){
+					case "ai" :
+						return "a";
+						break;
+					case "enter" :
+						return "e";
+						break;
+					case  "imes":
+						return "i";
+						break;
+					case  "ober":
+						return "o";
+						break;
+                    case  "ufat":
+						return "u";
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>
